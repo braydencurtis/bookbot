@@ -1,10 +1,20 @@
 from stats import count_words
 from stats import count_characters
-from stats import sorted_list
+from stats import sorted_dict
 
 book = "books/frankenstein.txt"
 
-print(f"{count_words(book)} words found in the document")
-print(count_characters(book))
+print("============ BOOKBOT ============")
+print(f"Analyzing book found at {book}...")
+print("----------- Word Count ----------")
+print(f"Found {count_words(book)} total words")
+print("--------- Character Count -------")
 
-print(sorted_list(count_characters(book)))
+for i in sorted_dict(count_characters(book)):
+    if i.isalpha() == True: 
+        print(f"{i}: {sorted_dict(count_characters(book))[i]}")
+        
+print("============= END ===============")
+
+
+
