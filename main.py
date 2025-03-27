@@ -1,6 +1,7 @@
 from stats import count_words
 from stats import count_characters
 from stats import sorted_dict
+import sys
 
 book = "books/frankenstein.txt"
 
