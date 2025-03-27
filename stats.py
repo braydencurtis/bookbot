@@ -19,7 +19,6 @@ def count_characters(path_to_file):
 def sort_on(dict):
     return dict["num"]
 
-def sorted_list(list):
-    sorted = list.sort(reverse=True, key=sort_on)
+def sorted_dict(dict):
+    sorted = dict.sort(reverse=True, key=sort_on)
     print(sorted)
-
