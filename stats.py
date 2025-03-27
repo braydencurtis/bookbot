@@ -15,10 +15,7 @@ def count_characters(path_to_file):
     char_counts = Counter(lower_case_contents)
     return char_counts
 
-
-def sort_on(dict):
-    return dict["num"]
-
-def sorted_dict(dict):
-    sorted = dict.sort(reverse=True, key=sort_on)
-    print(sorted)
+def sorted_dict(dictionary):
+    sorted_items = sorted(dictionary.items(), key=lambda item: item[1], reverse=True)
+    sorted_dictionary = dict(sorted_items)
+    return sorted_dictionary
